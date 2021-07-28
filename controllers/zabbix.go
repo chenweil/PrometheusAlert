@@ -41,7 +41,7 @@ func SendMessageZabbix(message ZabbixMessage, logsign string) string {
 		ret = PostToDingDing("Zabbix告警消息", message.ZabbixMessage, message.ZabbixTarget, "",logsign)
 	//飞书v1渠道
 	case "fs":
-		ret = PostToFS("Zabbix告警消息", message.ZabbixMessage, message.ZabbixTarget, "",logsign)
+		ret = PostToFS("监控平台告警消息", message.ZabbixMessage, message.ZabbixTarget, "",logsign)
 	//腾讯云短信
 	case "txdx":
 		ret = PostTXmessage(message.ZabbixMessage, message.ZabbixTarget, logsign)
